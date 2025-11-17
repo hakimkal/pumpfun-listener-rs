@@ -1,0 +1,24 @@
+[network]
+rpc_http_url = "https://api.mainnet-beta.solana.com"
+rpc_wss_url = "wss://api.mainnet-beta.solana.com"
+commitment = "confirmed"
+
+
+[programs]
+
+pump_fun = "6EF8rrecthR5Dkzon8Nwu78hRvfCKubJ14M5uBEwF6P"
+token_program = "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+
+
+[database]
+ redis_url = "redis://localhost:6379"
+
+[ingestion]
+dexscreener_poll_interval_secs = 10
+min_tx_count_for_active_pair = 20
+
+track_pumpfun = true
+
+[api]
+host = "0.0.0.0"
+port = 8080
