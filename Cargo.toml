@@ -1,0 +1,42 @@
+[package]
+name = "pumpfun_ingestion"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+
+
+# Solana
+solana-program = "3.0.0"
+solana-client = "3.0.10"
+solana-sdk = "3.0.0"
+solana-transaction-status = "3.0.10"
+spl-token = "9.0"
+spl-associated-token-account = "8.0.0"
+solana-account-decoder = "3.0.10"
+solana-commitment-config = "3.0.10"
+spl-token-2022 = "10.0.0"
+
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0"
+
+bincode = "1.3"
+bigdecimal = { version = "0.4", features = ["serde"] }
+
+
+anyhow = "1.0.100"
+tracing = "0.1.41"
+ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+flexi_logger = "0.31.7"
+reqwest = { version = "0.11", features = ["json", "rustls-tls"], default-features = false }
+config = "0.14"
+dotenv = "0.15"
+thiserror = "2.0.17"
+
+# Async runtime
+tokio = { version = "1.35", features = ["full"] }
+futures = "0.3"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.6", features = ["v4", "serde"] }
+
+redis = { version = "0.24", features = ["tokio-comp", "connection-manager"] }
